@@ -1,0 +1,23 @@
+.banner__main{
+    position: relative;
+    height: 550px;
+    object-fit: fill;
+    z-index: 1;
+
+}
+.banner_contents_top{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 5%;
+   justify-content: center;
+}
+.banner_contents{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    .mvi_name{
+        font-weight: 600;
+        font-size: 3rem;
+    }
+}

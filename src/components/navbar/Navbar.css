@@ -1,0 +1,30 @@
+.nav__main{
+    height: 60px;
+    /* padding: 5% 10%; */
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 2;
+    /* background-color: aqua; */
+   
+}
+.nav__main header{
+    box-shadow: none;
+}
+.main__color{
+    height: 60px;
+    /* padding: 5% 10%; */
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 2;
+    height: 60px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    
+    header{
+        box-shadow: none;
+    }
+}
