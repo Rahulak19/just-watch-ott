@@ -1,8 +1,8 @@
 .banner__main{
     position: relative;
     height: 550px;
-    object-fit: fill;
-    z-index: 1;
+    object-fit: contain;
+    /* z-index: 1; */
 
 }
 .banner_contents_top{
@@ -19,5 +19,37 @@
     .mvi_name{
         font-weight: 600;
         font-size: 3rem;
+        margin-bottom: 2rem;
     }
+}
+.mvi_btns{
+    display: flex;
+}
+.play_mvi{
+   display: flex;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border:none;
+    margin-right: 1.5rem;
+}
+.info_mvi{
+    display: flex;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border:none
+}
+.banner_img_end{
+    height: 7rem;
+    border: none;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
 }

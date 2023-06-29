@@ -1,5 +1,7 @@
 import React from "react";
 import "./Banner.css"
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 const Banner:React.FC=()=>{
     return(
         <>
@@ -7,20 +9,26 @@ const Banner:React.FC=()=>{
             {
                 background:`url('https://wallpaperaccess.com/full/1842590.jpg')`,
                 backgroundSize:"cover",
-                 backgroundPosition:"top top",
+                backgroundPosition:"center center",
                  backgroundRepeat:"no-repeat"
             }
         }>
             <div className="banner_contents_top">
-            <div className="banner_contents">
-                <div className="mvi_name">
-                    John Wick
+                <div className="banner_contents">
+                    <div className="mvi_name">
+                        John Wick
+                    </div>
+                    <div className="mvi_btns">
+                        <button className="play_mvi">
+                            <PlayArrowIcon sx={{marginTop:""}} fontSize="large" />
+                            Play</button>
+                        <button className="info_mvi">
+                            <InfoOutlinedIcon fontSize="large" />
+                            More Info</button>
+                    </div>
                 </div>
-                <div className="mvi_btns">
-                    <button className="play_mvi">Play</button>
-                    <button className="info_mvi">More Info</button>
-                </div>
-            </div></div>
+            </div>
+            <div className="banner_img_end"></div>
            
         </header>
         </>
