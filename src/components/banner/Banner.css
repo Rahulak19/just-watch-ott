@@ -20,6 +20,7 @@
         font-weight: 600;
         font-size: 3rem;
         margin-bottom: 2rem;
+       
     }
 }
 .mvi_btns{
@@ -28,7 +29,7 @@
 .play_mvi{
    display: flex;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: .5rem 1.5rem;
     align-items: center;
@@ -40,7 +41,7 @@
 .info_mvi{
     display: flex;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: .5rem 1.5rem;
     align-items: center;
@@ -51,5 +52,5 @@
 .banner_img_end{
     height: 7rem;
     border: none;
-    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+    background-image: linear-gradient(180deg,transparent,rgba(26, 23, 23, 0.61),#111);
 }

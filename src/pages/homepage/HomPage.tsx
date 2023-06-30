@@ -12,6 +12,7 @@ const HomePage:React.FC=()=>{
         {/* Banner */}
         <Banner />
         {/* MainPage */}
+        {/* <h1>Hello</h1>
         <h1>Hello</h1>
         <h1>Hello</h1>
         <h1>Hello</h1>
@@ -29,8 +30,7 @@ const HomePage:React.FC=()=>{
         <h1>Hello</h1>
         <h1>Hello</h1>
         <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
+        <h1>Hello</h1> */}
         {/* Footer */}
         </div>
         </>
