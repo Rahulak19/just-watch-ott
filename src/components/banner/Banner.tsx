@@ -4,23 +4,13 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import axios from "../../axios";
 import requests from "../../Requests";
+import { Originals } from "../../model/FetchMovieModel";
+import { IMAGE_URL } from "../../util/utils";
 
 const Banner:React.FC=()=>{
-    type Originals={
-        adult: string,
-        backdrop_path: string,
-        genre_ids: number[],
-        id: number,
-        original_language: string,
-        original_title: string,
-        overview: string,
-        popularity:number,
-        poster_path: string,
-        release_date: string,
-        title: string,
-        video: boolean,
-        vote_average: number,
-        vote_count: number
+   
+    function truncate(overview:string,num:number){
+        return overview?.length>num? overview.substring(0,num-1)+'...':overview;
     }
     const [movie,setMovie]:any=useState<Originals[]>([])
     useEffect(()=>{
@@ -40,7 +30,7 @@ const Banner:React.FC=()=>{
         <>
         <header className="banner__main" style={
             {
-                backgroundImage:`url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
+                backgroundImage:`url('${IMAGE_URL}/${movie?.backdrop_path}')`,
                 backgroundSize:"cover",
                 backgroundPosition:"top center",
                  backgroundRepeat:"no-repeat"
@@ -49,19 +39,22 @@ const Banner:React.FC=()=>{
             <div className="banner_contents_top">
                 <div className="banner_contents">
                     <div className="mvi_name">
-                        {movie.title}
+                        {movie?.title}
                     </div>
                     <div className="mvi_btns">
                         <button className="play_mvi">
-                            <PlayArrowIcon sx={{marginTop:""}} fontSize="large" />
+                            <PlayArrowIcon sx={{paddingRight:"5px"}} fontSize="medium" />
                             Play</button>
                         <button className="info_mvi">
-                            <InfoOutlinedIcon fontSize="large" />
+                            <InfoOutlinedIcon sx={{paddingRight:"5px"}} fontSize="medium" />
                             More Info</button>
+                    </div>
+                    <div className="mvi_banner_desc">
+                       {truncate(movie?.overview,150)}
                     </div>
                 </div>
             </div>
-            <div className="banner_img_end"></div>
+            {/* <div className="banner_img_end"></div> */}
            
         </header>
         </>
