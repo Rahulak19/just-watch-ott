@@ -1,0 +1,99 @@
+.login__screen{
+    /* display: flex; */
+    position:relative;
+    height: 100%;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/d282a426-b01a-424c-9b83-2c2445e4b61a/f7eb3bc2-2867-4c7e-94f8-e62ec11175cd/IN-en-20230626-popsignuptwoweeks-perspective_alpha_website_small.jpg") center no-repeat;
+    background-size: cover;
+    
+    
+}
+.login__screen__back{
+    /* display: flex; */
+    background: rgba(0,0,0,0.2);
+    
+}
+.page__title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    left: 10px;
+    top:10px;
+    position: fixed;
+    left:30px;
+    color: white;
+}
+.login__screen__btn{
+    position: fixed; 
+     top:10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: gray;
+    border: none;
+}
+.loginScreeen_gradiant{
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;   
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(to top,
+    rgba(0,0,0,0.8)0,
+    rgba(0,0,0,0)60%,
+    rgba(0,0,0,0.8)100%) !important;
+}
+.login__content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1rem;
+    
+}
+.login__content__title{
+    
+    font-size: 2rem;
+    font-weight: 600;
+}
+.login__content__title__sub{
+   
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: 400;
+}
+.login__email__btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+.email__inp{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.login__email{
+    opacity: 0.3;
+    border:none;
+    height: 2.3rem;
+    width: 100%;
+   font-size: 1rem;
+}
+.login__form{
+    display: flex;
+    width: 100%;
+}
+.login__start__btn{
+   
+   padding: 10px 20px;
+   font-size: 1rem;
+   
+   color: white;
+   background-color: gray;
+   border: none;
+   margin-left: 10px;
+}

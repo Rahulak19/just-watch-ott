@@ -98,7 +98,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       <Container maxWidth="xl" >
         <Toolbar variant="regular">
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -114,7 +114,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
             }}
           >
            Just Watch
-          </Typography>
+          </Typography> */}
+          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
