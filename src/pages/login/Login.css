@@ -30,6 +30,7 @@
     color: white;
     background-color: gray;
     border: none;
+    cursor: pointer;
 }
 .loginScreeen_gradiant{
     display: flex;
@@ -68,6 +69,7 @@
     width: 100%;
     justify-content: center;
     margin-top: 20px;
+   
 }
 .email__inp{
     display: flex;
@@ -96,4 +98,5 @@
    background-color: gray;
    border: none;
    margin-left: 10px;
+   cursor: pointer;
 }
