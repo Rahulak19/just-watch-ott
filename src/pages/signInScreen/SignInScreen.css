@@ -51,7 +51,14 @@
     cursor: pointer;
 
 }
-
+.signup__screen__span{
+    color: grey;
+    margin-right: 10px;
+}
+.signup__screen__span__link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
 @media screen and (max-width:800px) {
     .signIn__screen__div{
         display: flex;
