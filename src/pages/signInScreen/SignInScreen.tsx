@@ -23,6 +23,7 @@ createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.curr
   });
         
     }
+    
     const signIn=(e:React.SyntheticEvent):void=>{
         e.preventDefault();
         signInWithEmailAndPassword(auth,emailRef?.current?.value,passwordRef?.current?.value)

@@ -40,10 +40,13 @@ const Row:React.FC<Props>=(props:Props)=>{
                     className={`row__poster ${rowProps.isLarge && "row__posterLarge"}`}
                     src={`${IMAGE_URL}${rowProps.isLarge?movie.poster_path:movie.backdrop_path}`}
                     alt={movie.title} />
+                    
                     )
+                    
                     
                 ))
             }
+            <div>sss</div>
             </div>
            
         </div>
