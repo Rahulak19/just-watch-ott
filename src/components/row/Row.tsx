@@ -36,14 +36,20 @@ const Row:React.FC<Props>=(props:Props)=>{
                 movies.map(movie =>(
                     ((rowProps.isLarge && movie.poster_path) ||
                     (!rowProps.isLarge && movie.backdrop_path)) &&(
+
                         <img 
                     className={`row__poster ${rowProps.isLarge && "row__posterLarge"}`}
                     src={`${IMAGE_URL}${rowProps.isLarge?movie.poster_path:movie.backdrop_path}`}
                     alt={movie.title} />
-                    )
+                   
+                    
+                    ) 
+                   
+                    
                     
                 ))
             }
+           
             </div>
            
         </div>
