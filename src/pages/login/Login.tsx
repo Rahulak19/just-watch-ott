@@ -8,12 +8,15 @@ const Login: React.FC = () => {
       <div className="login__screen">
         <div className="login__screen__back">
           <div className="page__title">Just Watch</div>
-          <button
-            className="login__screen__btn"
-            onClick={() => setSignIn(true)}
-          >
-            Sign In
-          </button>
+         {!signIn?
+        <button
+        className="login__screen__btn"
+        onClick={() => setSignIn(true)}
+      >
+        Sign In
+      </button>
+      :<></> 
+        } 
           <div className="loginScreeen_gradiant">
             <div className="login__content">
                 {signIn?(
@@ -34,6 +37,7 @@ const Login: React.FC = () => {
                             className="login__email"
                             placeholder="Email Address"
                             type="email"
+                            required
                           />
                         </div>
                         <div className="btn__login__div">

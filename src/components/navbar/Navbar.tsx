@@ -16,10 +16,15 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import {login,logout, selectUser} from "../../app/reducers/userReducer";
+import { useDispatch, useSelector } from 'react-redux';
+import {auth} from "../../firebase";
+import { signOut } from "firebase/auth";
 
 
 
 const Navbar:React.FC=()=>{
+  const dispatch=useDispatch();
   const pages = ['Home', 'TV Shows', 'Movies','Watchlist'];
 const settings = ['Profile', 'Account', 'Help', 'Logout'];
 const [navBackground, setNavBackground] = useState<boolean>(false);
@@ -90,6 +95,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   
     const handleCloseUserMenu = () => {
       setAnchorElUser(null);
+    };
+    const handleLogout = () => {
+      signOut(auth).then(() => {
+        console.log("logged out")
+      }).catch((error) => {
+        // An error happened.
+        console.log("error",error)
+      });
+      dispatch(logout());
+
     };
     return(
         <>
@@ -219,11 +234,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              {/* {settings.map((setting) => ( */}
+
+                <MenuItem key={"Profile"} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
-              ))}
+                <MenuItem key={"Account"} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Account</Typography>
+                </MenuItem>
+                <MenuItem key={"Help"} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Help</Typography>
+                </MenuItem>
+                <MenuItem key={"Logout"} onClick={handleLogout}>
+                  <Typography textAlign="center">Logout</Typography>
+                </MenuItem>
+              {/* ))} */}
             </Menu>
           </Box>
         </Toolbar>

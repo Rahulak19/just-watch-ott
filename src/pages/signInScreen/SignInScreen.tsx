@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./SignInScreen.css"
 import {auth} from "../../firebase"
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
@@ -24,7 +24,7 @@ createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.curr
         
     }
     
-    const signIn=(e:React.SyntheticEvent):void=>{
+    const signIn=(e:React.SyntheticEvent)=>{
         e.preventDefault();
         signInWithEmailAndPassword(auth,emailRef?.current?.value,passwordRef?.current?.value)
         .then((signIn)=>{
@@ -36,6 +36,9 @@ createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.curr
             alert(errorMessage)
         })
     }
+    useEffect(()=>{
+      
+    },[signIn])
 
     return(
         <>

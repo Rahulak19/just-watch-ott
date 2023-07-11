@@ -28,7 +28,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: white;
-    background-color: gray;
+    background-color: red;
     border: none;
     cursor: pointer;
 }
@@ -93,10 +93,10 @@
    
    padding: 10px 20px;
    font-size: 1rem;
-   
    color: white;
-   background-color: gray;
+   background-color: red;
    border: none;
    margin-left: 10px;
    cursor: pointer;
 }
+

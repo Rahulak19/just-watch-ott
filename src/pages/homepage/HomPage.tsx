@@ -4,6 +4,7 @@ import "./HomePage.css"
 import Banner from "../../components/banner/Banner";
 import Row from "../../components/row/Row";
 import requests from "../../Requests";
+import Footer from "../../components/footer/Footer";
 const HomePage:React.FC=()=>{
     return(
         <>
@@ -23,31 +24,31 @@ const HomePage:React.FC=()=>{
          <Row 
         title="Action Movies"
         fetchURL={requests.fetchActionMovies}
-        // isLarge={true}
+         isLarge={true}
         
         />
          <Row 
         title="Comedy Movies"
         fetchURL={requests.fetchComedyMovies}
-        // isLarge={true}
+         isLarge={true}
         
         />
          <Row 
         title="Horror Movies"
         fetchURL={requests.fetchHorrorMovies}
-        // isLarge={true}
+         isLarge={true}
         
         />
          <Row 
         title="Romantic Movies"
         fetchURL={requests.fetchRomanceMovies}
-        // isLarge={true}
+         isLarge={true}
         
         />
         <Row 
         title="Top Rated"
         fetchURL={requests.fetchTopRated}
-        // isLarge={true}
+         isLarge={true}
         
         />
 
@@ -71,6 +72,7 @@ const HomePage:React.FC=()=>{
         <h1>Hello</h1>
         <h1>Hello</h1> */}
         {/* Footer */}
+        <Footer />
         </div>
         </>
     )
