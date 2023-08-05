@@ -14,13 +14,13 @@ function App() {
   useEffect(()=>{
    const unsubscribe= auth.onAuthStateChanged((userAuth)=>{
       if(userAuth){
-        console.log(userAuth)
+       // console.log(userAuth)
        dispatch(login({
         uid:userAuth.uid,
         email:userAuth.email
        }))
       }else{
-        console.log("not logged")
+       // console.log("not logged")
         dispatch(logout)
       }
     })
