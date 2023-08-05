@@ -98,10 +98,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     };
     const handleLogout = () => {
       signOut(auth).then(() => {
-        console.log("logged out")
+     //   console.log("logged out")
       }).catch((error) => {
         // An error happened.
-        console.log("error",error)
+    //    console.log("error",error)
       });
       dispatch(logout());
 

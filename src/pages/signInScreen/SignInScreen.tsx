@@ -2,33 +2,47 @@ import React, { useEffect, useRef } from "react";
 import "./SignInScreen.css"
 import {auth} from "../../firebase"
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
-const SignInScreen:React.FC=()=>{
+interface Props{
+  signUp:boolean;
+  setSignUp:(val: boolean) => void;
+  signIn:boolean;
+  setSignIn:(val: boolean) => void;
+}
+const SignInScreen:React.FC<Props>=(props:Props)=>{
+  
     const emailRef=useRef<HTMLDivElement | any>()
     const passwordRef=useRef<HTMLDivElement | any>()
+
     const register=(e:React.SyntheticEvent):void=>{
-        e.preventDefault();
-       // const auth = getAuth();
-createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.current?.value)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    console.log("user",userCredential)
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert(errorMessage)
-    // ..
-  });
-        
+//         e.preventDefault();
+//        // const auth = getAuth();
+// createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.current?.value)
+//   .then((userCredential) => {
+//     // Signed in 
+//     const user = userCredential.user;
+//     console.log("user",userCredential)
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     alert(errorMessage)
+//     // ..
+//   });
+props.setSignIn(false);
+props.setSignUp(true);
+
     }
+
+    useEffect(()=>{
+
+    },[props.setSignIn,props.setSignUp])
     
     const signIn=(e:React.SyntheticEvent)=>{
         e.preventDefault();
         signInWithEmailAndPassword(auth,emailRef?.current?.value,passwordRef?.current?.value)
         .then((signIn)=>{
-            console.log(signIn)
+           // console.log(signIn)
         })
         .catch((error)=>{
             const errorCode = error.code;

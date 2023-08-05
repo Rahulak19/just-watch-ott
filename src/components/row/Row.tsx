@@ -25,8 +25,8 @@ const Row:React.FC<Props>=(props:Props)=>{
         fetchData();
 
     },[props.fetchURL])
-    console.log(movies)
-    console.log(rowProps.isLarge)
+    // console.log(movies)
+    // console.log(rowProps.isLarge)
     return(
         <>
         <div className="row">
